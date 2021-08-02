@@ -1,0 +1,26 @@
+ public static void reversePrint(SinglyLinkedListNode llist) 
+   {
+       SinglyLinkedListNode temp = llist;
+       
+       Stack<SinglyLinkedListNode> s1 = new Stack<>();
+       
+       if(llist == null)
+       {
+           return;
+       }
+       
+       while(temp != null)
+       {
+           s1.add(temp);
+           
+           temp = temp.next;
+       }
+       
+       while(!s1.isEmpty())
+       {
+       SinglyLinkedListNode ourhead = s1.pop();
+       
+       System.out.println(ourhead.data);
+       
+       }
+   }

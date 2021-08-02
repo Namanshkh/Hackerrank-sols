@@ -1,0 +1,59 @@
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        
+        long N= sc.nextInt();
+
+        int option , k;
+        String s1, newString;
+        
+        Stack<String> stack = new Stack<>();
+
+        while(N-- >0){
+            
+            option = sc.nextInt();
+            switch (option){
+                
+                case 1:
+                
+                    if(stack.size() > 0)
+                    {
+                        s1 = stack.peek();
+                    }
+                    else
+                    s1 = "";
+                    
+                    newString = s1 + sc.next();
+                    stack.push(newString);
+                    break;
+                    
+                case 2:
+                
+                    k = sc.nextInt();
+                    s1 = stack.peek();
+                    newString = s1.substring(0, s1.length()-k);
+                    stack.push(newString);
+                    break;
+                    
+                case 3:
+                
+                    k = sc.nextInt()-1;
+                    if(stack.size() > 0) {
+                        s1 = stack.peek();
+                        String c = String.valueOf(s1.charAt(k));
+                        System.out.println(c);
+                    }
+                    break;
+                    
+                case 4:
+
+                    stack.pop();
+                    break;
+                    
+            }
+        }
+        
+    }
+}

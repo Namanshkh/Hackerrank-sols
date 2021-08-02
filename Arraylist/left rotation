@@ -1,0 +1,14 @@
+public static List<Integer> rotateLeft(int d, List<Integer> arr) 
+    {
+        int n= arr.size();
+        for(int i=0;i<d;i++)
+       {
+    for(int j=0;j<n-1;j++)
+    {
+        Collections.swap(arr,j,j+1);
+    }
+       }
+return arr;
+    }
+
+}

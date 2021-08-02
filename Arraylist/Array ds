@@ -1,0 +1,10 @@
+public static List<Integer> reverseArray(List<Integer> a) 
+        {
+        int length= a.size()-1;
+        
+        for(int i = 0 ; i <= length/2 ; i++)
+        {
+            Collections.swap(a,i,length-i);
+        }
+        return a;
+    }
